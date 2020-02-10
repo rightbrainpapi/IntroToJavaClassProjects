@@ -8,10 +8,12 @@ package paycheck;
 /**
  *
  * @author Darnell Simon
+ * @since  02/6/2020
  * 
  * Description:
  * 
  * What is the Project?
+ * This project takes two numbers. 
  * 
  * 
  * WHAT DID YOU LEARN
@@ -34,6 +36,10 @@ package paycheck;
  * 
  * METHODS
  *  - printf; is a method that allows you to concatenate %.2f%n 
+ *      - % % is the insert here indicator
+ *      - .2; means print out 2 places after the decimal 
+ *      - f stands for floating point number 
+ *      - n starts a new number
  * 
  */
 
