@@ -33,39 +33,48 @@ public class Birthdays {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        
+    
+    //Static introduces Global variables
+    static double currentMonth, currentYear;
+    static Scanner sc = new Scanner(System.in);
+    
+    public static void main(String[] args) {       
         // Declaring the variables
-        double birthMonth,birthYear,
-               currentMonth, currentYear,
-               age;
+        double birthMonth,birthYear,age;       
+ 
+        getCurrentDate();
         
-        Scanner sc = new Scanner(System.in);
-        
-        System.out.println("Please enter your birth month, birth year as well as");
-        System.out.println("the current month followed by the current year.");
-        System.out.println("Enter four zeros to stop.");
-        
+        promptUser();
         birthMonth = sc.nextDouble();
         
         while(birthMonth > 0){
             birthYear = sc.nextDouble();
-            currentMonth = sc.nextDouble();
-            currentYear = sc.nextDouble();
+//            currentMonth = sc.nextDouble();
+//            currentYear = sc.nextDouble();
             
             age = currentYear - birthYear + (currentMonth - birthMonth)/12;
             
             System.out.printf("For %.0f and %.0f your age is %.1f%n%n", 
                     birthMonth, birthYear, age);
             
-        System.out.println("Please enter your birth month, birth year as well as");
-        System.out.println("the current month followed by the current year.");
-        System.out.println("Enter four zeros to stop.");
-        
-        birthMonth = sc.nextDouble();
-            
+            promptUser();
+            birthMonth = sc.nextDouble();
         }
+    }
+    
+    //THIS METHOD PROMPTS THE USER FOR THE REQUIRED INFO
+    // void represents that the method will not return 
+    public static void promptUser(){
+        System.out.println("Please enter your birth month, birth year as well as");
+        System.out.println("Enter four zeros to stop.");
+    }
+    
+    //THIS METHOD GETS THE CURRENT MONTH AND YEAR.
+    public static void getCurrentDate (){
+        System.out.println("Enter the current month followed by the current year.");
+        currentMonth = sc.nextDouble();
+        currentYear = sc.nextDouble();
+    
     }
     
 }

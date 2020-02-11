@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package planets;
 
 /**
@@ -29,6 +24,7 @@ package planets;
  */
 
 // Pacakage Impports
+import java.io.PrintStream; //import PrintStream class
 import java.util.Scanner;
 import java.math.*;
 
@@ -37,20 +33,15 @@ public class Planets {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // Do Something
+    public static void main(String[] args) throws Exception { 
         Scanner sc = new Scanner(System.in);
+        PrintStream ps = new PrintStream("planetOutput.txt");
         
-        System.out.println("Please enter the folowing: ");
-        System.out.print("(1)name of a planet,");
-        System.out.print("(2) the mass of the planet,");
-        System.out.println("(3) & the distance of the planet from the sun. \n");
-        System.out.println("Example: Earth 5.972E+24 149.6E+9 \n");
-        System.out.println("Enter four zeros to stop.\n");
+        promptUser();
 
         // Declaring the variables
         final double SUNMASS = 1.989E+30;
-        final double GRAVCONST = 6.67E-11;
+        final double UNIVERSALGRAVITATIONALCONSTANT  = -6.67E-11;
         String planet;
         double planetMass, distance, gravPotential; 
 
@@ -65,7 +56,7 @@ public class Planets {
             distance = sc.nextDouble();
 
             //Calculating the Gravitational Potential Energy
-            gravPotential = (GRAVCONST * SUNMASS * planetMass)/(distance);
+            gravPotential = (UNIVERSALGRAVITATIONALCONSTANT * SUNMASS * planetMass)/(distance);
 
             //////////////////////////////////////////////
             // Gravitational Potential Energy Formatter //
@@ -82,18 +73,30 @@ public class Planets {
             // End: Gravitational Potential Energy Formatter //
             ///////////////////////////////////////////////////
             //Printing Calculation
-            System.out.print("\nThe Gravitational Potential Energy between ");
-            System.out.print( planet + " and the Sun, at a distance of ");
-            System.out.print( distance +  " Meters is " + myformattedGPE +" N M^2/Kg^2.\n");
+            ps.print("\nThe Gravitational Potential Energy between ");
+            ps.print( planet + " and the Sun, at a distance of ");
+            ps.print( distance +  " Meters is " + myformattedGPE +" N M^2/Kg^2.\n");
 
+            promptUser();
+            
+        } 
+    }
+    
+    //THIS METHOD PROMPTS THE USER FOR THE REQUIRED INFO
+    public static void promptUser(){
             // Print the Instructions for next incoming data
-            System.out.println("\nPlease enter the folowing: ");
+            System.out.println("\nPlease enter the following: ");
             System.out.print("(1)name of a planet,");
             System.out.print("(2) the mass of the planet,");
             System.out.println("(3) & the distance of the planet from the sun. \n");
             System.out.println("Example: Earth 5.972E+24 149.6E+9 \n");
-            System.out.println("Enter four zeros to stop.\n");
-        }
+            System.out.println("Enter four zeros to stop.\n"); 
     }
     
+    
+    //THIS METHOD FORMMATTES THE BIG DECIMALS
+    //    public static void bigDecimalFormatter(){
+    //    
+    //    // return the formatted 
+    //    }
 }

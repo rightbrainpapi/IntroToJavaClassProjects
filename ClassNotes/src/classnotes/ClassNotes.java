@@ -173,6 +173,17 @@ package classnotes;
  * ex. 10hour pay 5/hour
  * 
  * 
+ * 
+ * 
+ * /////////////////////////////////////////
+ * ///////// PROGRAMMING APPROACH //////////
+ * /////////////////////////////////////////
+ * 
+ * [1] TOP DOWN DESIGNS
+ * [2] BOTTOM UP DESIGN
+ * 
+ * 
+ * If a variable is static it is available globally
  */
 
 //Importing packages that we need
