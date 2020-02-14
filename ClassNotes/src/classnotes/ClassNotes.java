@@ -32,7 +32,7 @@ package classnotes;
  *      Project: Contains 1 or more projects 
  *      Source Files
  *      Class: a class is a collection of methods
- *      Methods: includes statements which 
+ *      Methods: includes a signature/ header followed by a bunch of statements which 
  * 
  * STRUCTURE of Classes
  *      Classes start with a capital letter
@@ -184,6 +184,27 @@ package classnotes;
  * 
  * 
  * If a variable is static it is available globally
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * ////////////////////////////////////
+ * //////////// Lesson 6 //////////////
+ * ////////////////////////////////////
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+ * Identify is a series of 1 or more characters 
  */
 
 //Importing packages that we need
